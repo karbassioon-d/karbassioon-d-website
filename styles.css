@@ -1,0 +1,283 @@
+body * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background: #1d1d1d;
+    display: block;
+    min-width: 320px;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a { color: #909096;}
+
+
+a:hover {
+    color: #08fdd8;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.name-text {
+    color: #fff;
+    margin: 0;
+    font-size: 3rem;
+    line-height: 8.7rem;
+    position: relative;
+    font-weight: 400;
+
+}
+
+.social {
+    color: #909096;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    height: 20rem;
+}
+
+.social li {
+    display: list-item;
+}
+
+li {
+    display: list-item;
+}
+
+ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    border: 1px  solid red;
+
+}
+
+.text-zone {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* card stuff */
+.cardTextTitle {
+    color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.card1 {
+    width: 100%;
+    height: 30rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.75s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    background: white;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    background-image: url(./images/sunset.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 350%;
+}
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__face--back {
+    background-color: white;
+    transform: rotateY(180deg);
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+}
+
+.card__header {
+    position: relative;
+    padding: 30px 30px 40px;
+    text-align: center;
+}
+
+.card__header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+}
+
+
+.dara {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.cardText {
+    color: black;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+/*sections */
+.section-home1, .section-home2, .section-home3, .section-home4, .section-home5 {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+
+
+.sectionText {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.sectionFull {
+    min-height: 100vh;
+    padding: 9rem 3rem;
+    position: relative;
+}
+
+.section4 {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sec2 {
+    place-items: left;
+    align-content: left;
+    min-height: 100vh;
+}
+
+/*skill section */
+
+.skillContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.htmlDiv, .CSSDiv, .JSDiv, .reactDiv, .pythonDiv {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+}
+
+.htmlDescription {
+    background: #fafafa;
+	width: 100%;
+	display: none;
+	border-radius: 3px;
+    box-shadow: 1px 1px 3px #555;
+    padding: 25px;}
+
+.skillLogo {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    position: relative;
+}
+
+/*scroll effect */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+/*pictures */
+.aomoriPics {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.aomoriPics:hover {
+    border-radius: 5%;
+    transition: .3s;
+    scale: 150%;
+}
+
+/* Auto-Typing */
+
+span {
+    color: red;
+    font-size: 3rem;
+}
